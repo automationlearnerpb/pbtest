@@ -1,0 +1,25 @@
+﻿//Navigate to DAI
+params maxWait
+set port to 80
+set nopCommerce_address to "nopcommerce.testplant.com:80"
+set testresult = false
+click "AddressBarInput"
+TypeText nopCommerce_address
+TypeText return
+
+//Wait for DAI Login modal to appear
+repeat maxWait minute
+	
+	If not(imagefound(imageName:"nopcommerce_logo", waitFor:2)) then		
+		Logwarning "nopcommerce_logo not found"		
+		wait 10		
+	else		
+		Assert that imageFound("nopcommerce_logo") is true
+		Exit Repeat		
+	end if
+end repeat
+Assert that imageFound("nopcommerce_logo") is true
+set testresult = true
+return testresult
+
+

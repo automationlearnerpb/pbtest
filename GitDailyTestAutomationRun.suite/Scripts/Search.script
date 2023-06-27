@@ -1,0 +1,15 @@
+﻿params searchTerm
+
+if searchTerm is empty then set searchTerm to "camera"
+searchItem searchTerm
+
+WaitFor 30, "Search_text"
+Assert that ImageFound("Search_text") is true
+
+to searchItem searchTerm
+	Click Text:"Search store", WaitFor:8
+	TypeText searchTerm
+	TypeText returnKey
+	
+	//CaptureScreen
+end searchItem

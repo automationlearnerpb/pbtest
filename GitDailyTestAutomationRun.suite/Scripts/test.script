@@ -1,0 +1,13 @@
+﻿Run "Verify initial SUT state" 3
+Run "Launch Browser" "chrome", 3
+closeBrowser
+
+Run "Verify initial SUT state" 3
+Run "Launch Browser" "chrome", 3
+closeBrowser
+Run "Verify initial SUT state" 3
+Run "Launch Browser" "chrome", 3
+closeBrowser
+Run "Verify initial SUT state" 3
+Run "Launch Browser" "chrome", 3
+closeBrowser

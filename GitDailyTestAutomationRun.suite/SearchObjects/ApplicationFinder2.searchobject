@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		757,
+		477,
+		402,
+		125
+	],
+	"lastmodifieddate": 1687408062.527,
+	"createddate": 1687408018.358,
+	"name": "ApplicationFinder2",
+	"lastfounddate": 1687408153.135,
+	"ocrcapturestring": "Application Finder O = 0 2$ Preferences Launch",
+	"lastfoundlocation": [
+		757,
+		477,
+		402,
+		125
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[201,62]",
+					"Tolerance": "_62",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "AppFinder/ApplicationFinder2.png",
+				"connectionname": "ec2-52-49-173-178.eu-west-1.compute.amazonaws.com",
+				"type": 1,
+				"connectionserverid": "ec2-52-49-173-178.eu-west-1.compute.amazonaws.com",
+				"capturerect": [
+					757,
+					477,
+					402,
+					125
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Application Finder O = 0 2$ Preferences Launch"
+			}
+	]
+}

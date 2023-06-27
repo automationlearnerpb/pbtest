@@ -1,0 +1,6 @@
+﻿// This script tests the initial state of the SUT. It is necessary to wait for SUT to be initialised before proceeding with any tests
+params  modelName, actionName
+
+Run "Verify initial SUT state" 1
+Log "Running snippet in action "&& actionName && " of model " && modelName
+

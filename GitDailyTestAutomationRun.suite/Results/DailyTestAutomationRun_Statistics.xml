@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<statistics>
+ <script name="manual_checking">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2023-06-25 19:15:18 +1000</FirstRun>
+  <LastRun>2023-06-25 19:15:18 +1000</LastRun>
+  <TotalTimeOnSuccess>12.945000</TotalTimeOnSuccess>
+ </script>
+</statistics>
