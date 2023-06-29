@@ -1,0 +1,14 @@
+﻿
+put "Recycle Bin" into text
+
+Log "Connecting....."
+Log ConnectionInfo().name
+
+if  ConnectionInfo().Status is "Connected" then 
+	log "Connected to " & ConnectionInfo().name
+	TypeText enterKey
+	log "Searching for "&text
+	if ImageFound(text: text, waitFor: 15)
+		CaptureScreen resourcepath(the international date & "_"& hostname)
+	end if
+end if

@@ -1,0 +1,15 @@
+﻿put "eggplantpgvm01" into hostname
+
+Log "Connecting....."
+Connect {serverID:  "eggplantpgvm01.png.is.keysight.com", portNum: 3389, password: "#WibbleWobble2023", username: "eggplantpenang", Type:"RDP", Width: 1920, Height: 1080}
+
+put ConnectionInfo("eggplantpgvm01.png.is.keysight.com") into connected
+
+if  connected.Status is "Connected" then 
+	log "Connected to " & hostname
+	TypeText enterKey
+	log "Searching for hostname...."&hostname
+	if ImageFound(text: uppercase(hostname), waitFor: 15)
+		CaptureScreen resourcepath(the international date & "_"& hostname)
+	end if
+end if

@@ -1,0 +1,9 @@
+﻿
+Log "Start Now"
+
+if ImageFound(text: "Recycle Bin", waitFor: 15)
+	CaptureScreen {Name: "screenshot"}
+end if
+
+
+

@@ -1,0 +1,2 @@
+fromDate,toDate,chartName,allRuns,allRunsPass,allRunsFail,allRunsInComplete,coverage,failureType,exploRunFail,directRunFail,TCBreakdown,TCCompletion,completedTC,IncompltedTC,testResultRecord
+2/20/2020,2/26/2020,20Feb2020To26Feb2020,TRUE,3,0,0,TRUE,FALSE,,,TRUE,TRUE,2,19,TRUE

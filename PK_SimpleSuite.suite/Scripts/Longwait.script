@@ -1,0 +1,3 @@
+﻿Wait 200
+
+WaitFor 200, Text:"won't be found"

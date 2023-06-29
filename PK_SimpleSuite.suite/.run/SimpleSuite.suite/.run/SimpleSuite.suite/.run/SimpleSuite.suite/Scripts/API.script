@@ -1,0 +1,35 @@
+﻿
+set apiUrl to  "http://dai.png.is.keysight.com/api/run"
+log !"[[my name]] - full url is [[apiUrl]]."
+
+set payload to buildRunPayload ("simple_qaSummary", "shirley_soon@keysight.com","PassCase1", "1","QATest","C:\Users\sawasoon.KEYSIGHT\Desktop\SimpleSuite.suite") 
+
+set requestHeaders to {"Accept": "*/*", "Authorization": "Bearer" && "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDkxMDYwMjEsImlhdCI6MTYxNzU3MDAyMSwic3ViIjoiMzRlN2QxNmUtYTIzNS00NTlhLWI0ZjQtOTIyNGNiYmIzZWY3IiwiaXNzIjoiZWdncGxhbnRhaS5jb20iLCJ1c2VyIjp7InVzZXJuYW1lIjoiYWRtaW5AZWdncGxhbnQuaW8iLCJyb2xlIjoiQWRtaW4iLCJpc19zZXJ2aWNlIjpmYWxzZX0sImdyb3VwcyI6W3siaWQiOjY4LCJuYW1lIjoiYWRtaW5AZWdncGxhbnQuaW8ifV0sInJhbmQiOjU4NzQ5ODE3NDIyNjd9.Dlx9Oz8CnWimmIm5fD6DbEoylWf98iipAs1byBDE-Ew"}
+
+log !"[[my name]] - request method is [[method]]."
+log !"[[my name]] - request using headers [[requestHeaders]]."
+log !"[[my name]] - request body is: [[payload]]."
+
+
+post payload to url apiUrl with headers requestHeaders
+set response to it as a property list
+
+
+//set the initialSuites to the suiteVariables.sut_initial_suites -- put the initialsuites back to the way it was
+
+log "debug", !"[[my name]] - response is: [[response]]."
+return response
+
+to buildRunPayload modelName, group, directedTest, iterations, agent, suite
+
+	set payload to {:}
+	set payload.modelName to modelName
+	set payload.group to group
+	set payload.directedTest to directedTest
+	set payload.iterations to iterations
+	set payload.agentName to agent
+	set payload.suiteLocation to suite
+	
+	return payload
+	
+end buildRunPayload

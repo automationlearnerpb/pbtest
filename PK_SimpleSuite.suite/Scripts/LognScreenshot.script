@@ -1,0 +1,4 @@
+﻿Log "Testing empty sut....executing dumb script"
+Log "1+2=3"
+
+CaptureScreen resourcepath(the international date)

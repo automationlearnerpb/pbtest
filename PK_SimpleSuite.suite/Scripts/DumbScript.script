@@ -1,0 +1,16 @@
+﻿put "HP600G3_1" into hostname
+put "Recycle Bin" into text
+
+Log "Connecting....."
+Connect {serverID:  "HP600G3", portNum: 3389, password: "usr4tst2", username: "lvltuser", Type:"RDP", Width: 1920, Height: 1080}
+
+put ConnectionInfo("HP600G3") into connected
+
+if  connected.Status is "Connected" then 
+	log "Connected to " & hostname
+	TypeText enterKey
+	log "Searching "&text
+	if ImageFound(text: text, waitFor: 15)
+		CaptureScreen resourcepath(the international date & "_"& hostname)
+	end if
+end if

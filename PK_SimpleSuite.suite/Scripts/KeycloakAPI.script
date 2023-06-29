@@ -1,0 +1,64 @@
+﻿# call the IAM endpoint for the keycloak details that make up the auth url
+set iamDetails to iam_getDetails(daiUrl: "https://edge.dai.webperfdev.com" by name)
+
+
+set keycloak_base_url to iamDetails.keycloak_base_url
+set keycloak_realm to iamDetails.keycloak_realm
+set auth_url to !"[[keycloak_base_url]]realms/[[keycloak_realm]]/protocol/openid-connect/token"
+
+# save the auth token
+set token to auth(client_secret: "c38ce33d-5644-4198-b28f-9cf3d9ac05e4", auth_url: auth_url by name)
+
+set requestH to {"Accept": "*/*", "Authorization": "Bearer" && token}
+
+# get test case request
+//getRequest "https://edge.dai.webperfdev.com/modeler_service/api/v1/test_cases", requestH
+
+#trigger runner to run with test config id
+postRequest "https://edge.dai.webperfdev.com/task_scheduler_service/api/v1/task_instances/3d502ff5-bdaa-4abd-933e-f17217a2059e", "", requestH
+
+# post request
+# construct payload body based on request
+to postRequest apiUrl, payload, requestHeaders
+
+	post payload to url apiUrl with headers requestHeaders
+	set response to it as a property list
+	
+	log response
+	
+	return response
+	
+end postRequest
+
+to getRequest apiUrl, requestHeaders
+
+	get url apiUrl with headers requestHeaders
+	
+	put it into response
+	
+	log response
+	return response
+	
+	
+end getRequest
+
+to auth client_secret, auth_url
+
+	set headers to {"Content-Type": "application/x-www-form-urlencoded"}
+	set payload to {client_id: "client:dai:agent:integration", client_secret: client_secret, grant_type: "client_credentials"}
+
+	post payload to url auth_url with headers headers
+	put it as a property list into response
+	return response.access_token
+	
+end auth
+
+to iam_getDetails daiUrl
+
+	set endpoint to "/composer/api/v1/services/iam/v1.0.0"	
+	get url !"[[daiUrl]][[endpoint]]"
+	set iamDetails to it 
+	
+	return iamDetails as a property list
+	
+end iam_getDetails

@@ -1,0 +1,11 @@
+﻿Repeat until "June 23, 2023 11:15 AM"
+	Log "yes"
+End repeat
+
+If time is not equal to "11:10am" then
+	If date is not equal to "24/6/2023" then
+		
+	End If	
+End If
+
+put the basic time -- Jan 4, 2008 03:20 PM

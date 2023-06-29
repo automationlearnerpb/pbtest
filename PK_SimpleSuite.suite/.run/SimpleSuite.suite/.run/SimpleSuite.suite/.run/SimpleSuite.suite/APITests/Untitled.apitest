@@ -1,0 +1,22 @@
+{
+    URLparameters = (
+	{
+	    checkedNumber = <*BY>;
+	    param = "";
+	    showCheckedNumber = <*BY>;
+	    value = "";
+	}
+    );
+    authenticationType = "";
+    httpVerb = "";
+    oauth1Token = "";
+    password = "";
+    requestBody = "";
+    requestBodyFormat = "";
+    requestHeaders = "<![CDATA[]]>";
+    requests = "";
+    testResults = "";
+    testScript = "";
+    url = "";
+    userName = "";
+}

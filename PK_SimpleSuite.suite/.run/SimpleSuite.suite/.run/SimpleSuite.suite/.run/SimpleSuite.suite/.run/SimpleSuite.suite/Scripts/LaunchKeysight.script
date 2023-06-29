@@ -1,0 +1,17 @@
+﻿//open chrome
+TypeText WindowsKey, r
+
+wait 2
+
+TypeText "chrome"
+Wait 2
+TypeText Return
+
+waitFor 10, "googleURL"
+
+//open DAI website
+TypeText "keysight.com", Return
+
+Wait 5
+
+If ImageFound("KeysightImg") then LogSuccess "Success::Launching Keysight"
