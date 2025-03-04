@@ -1,0 +1,23 @@
+﻿//This script launches a Firefox browser
+params randomValueForPassOrFail
+
+If randomValueForPassOrFail.toLower = ...
+	...  "fail" :
+		wait 10seconds
+		log "Runing fail condition as input is set to fail"
+		assert that (true = false) with error
+		
+	... "exception" :
+		wait 10seconds
+		log "Runing exception condition as input is set to exception"
+		assert that (true = false) with exception
+		
+	... "pass":	
+		log "Runing pass condition as input is set to pass"	
+		assert that (true = true) 
+End if
+
+
+
+
+
