@@ -4,12 +4,13 @@ set testresult = false
 
 checkSUTconnected
 CaptureScreen (Name: "Sut connected")
-Set ExpectedText to "Start"
+Set ExpectedText to "Postman"
 
 repeat maxWait minutes
 	
 	If not imagefound(Text:ExpectedText, waitFor:10) then	
 		Logwarning "DesktopBackground isn't found."	
+
 		CaptureScreen()
 		wait 10		
 	else		
@@ -19,7 +20,9 @@ repeat maxWait minutes
 	
 end repeat
 
+Assert (testresult), "Expected Text not found"
 return testresult
+
 
 
 to checkSUTconnected
