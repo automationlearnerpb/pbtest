@@ -26,7 +26,6 @@ cypress/logs/
 # ==============================
 # Reports & Artifacts (Mochawesome / Allure / etc.)
 # ==============================
-*.json
 *.html
 *.xml
 merged-report.json
