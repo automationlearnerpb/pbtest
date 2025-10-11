@@ -1,0 +1,60 @@
+# ==============================
+# Node.js dependencies
+# ==============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+# ==============================
+# Cypress generated folders
+# ==============================
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+cypress/results/
+cypress/reports/
+cypress/cache/
+cypress/logs/
+
+# Cypress configuration backups or local state
+.cypress/
+.cache/
+
+# ==============================
+# Reports & Artifacts (Mochawesome / Allure / etc.)
+# ==============================
+*.json
+*.html
+*.xml
+merged-report.json
+mochawesome-report/
+allure-results/
+allure-report/
+coverage/
+
+# ==============================
+# Environment and secrets
+# ==============================
+.env
+.env.*
+!env.example
+
+# ==============================
+# IDE / OS files
+# ==============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# ==============================
+# Build / CI artifacts
+# ==============================
+dist/
+build/
+.tmp/
+logs/
