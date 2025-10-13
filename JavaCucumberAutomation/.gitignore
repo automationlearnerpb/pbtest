@@ -1,0 +1,138 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+.kotlin
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+# ----------------------------
+# OS cruft
+# ----------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# IDEs
+# ----------------------------
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code (if used)
+.vscode/
+
+# ----------------------------
+# Build artifacts (Maven)
+# ----------------------------
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# Maven Surefire/Failsafe reports (already in target, but keep explicit for other setups)
+surefire-reports/
+failsafe-reports/
+
+# ----------------------------
+# Test reports & artifacts
+# ----------------------------
+# Cucumber
+cucumber.json
+cucumber.xml
+cucumber-report.*
+cucumber-reports/
+target/cucumber*/       # any cucumber-* under target
+
+# TestNG default report folder (if not under target)
+test-output/
+
+# Allure (if used)
+allure-results/
+allure-report/
+
+# Custom reports/screenshots/logs
+reports/
+screenshots/
+logs/
+
+# ----------------------------
+# Selenium/WebDriver odds & ends
+# ----------------------------
+# If you keep local driver binaries in the repo (prefer Selenium Manager/WebDriverManager instead)
+drivers/
+drivers/**/*
+*.log            # e.g., chrome/driver logs like chrome*.log, geckodriver.log
+
+# ----------------------------
+# Environment / config
+# ----------------------------
+.env
+.env.*
+*.local.properties
+*.secret.properties
+*.credentials
+*.keystore
+
+# ----------------------------
+# Java / tooling
+# ----------------------------
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+replay_pid*
+
+# ----------------------------
+# Node or front-end bits (just in case)
+# ----------------------------
+node_modules/
+dist/
+build/
+
+# ----------------------------
+# Misc temp files
+# ----------------------------
+*.tmp
+*.temp
+*.swp
+*.swo
+*.orig

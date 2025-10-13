@@ -1,6 +1,0 @@
-﻿
-TypeText AltKey, F2
-
-set commandLine to "firefox"
-Wait 1
-TypeText commandLine, returnKey

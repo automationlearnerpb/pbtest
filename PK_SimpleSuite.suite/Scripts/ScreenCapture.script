@@ -1,5 +1,0 @@
-﻿params name 
-
-put "Screen capture by "&name
-
-CaptureScreen {Name: "ScreenCapture" & today}
