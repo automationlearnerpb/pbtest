@@ -1,7 +1,0 @@
-﻿Run "Verify initial SUT state",3
-Run "Launch Browser", "Chrome",3
-Run "closeBrowser"
-//Run "GotoHomepage", 3
-//Search "camera"
-//closeBrowser
-
