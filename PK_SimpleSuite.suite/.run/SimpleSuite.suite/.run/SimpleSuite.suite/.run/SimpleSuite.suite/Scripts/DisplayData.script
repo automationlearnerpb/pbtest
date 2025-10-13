@@ -1,3 +1,0 @@
-﻿Set qaSummaryData to the first item of CSVValue(file resourcePath("dateSelectionTest.csv"))
-
-Log qaSummaryData's message 
