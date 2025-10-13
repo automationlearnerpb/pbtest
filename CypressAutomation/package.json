@@ -1,0 +1,20 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "Cypress automation dependencies",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf cypress/videos cypress/screenshots cypress/downloads cypress/results cypress/reports",
+    "test": "npm run clean && cypress run",
+    "posttest": "mochawesome-merge cypress/reports/json/*.json > cypress/reports/merged.json && marge cypress/reports/merged.json -o cypress/reports/html -f index"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.4.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.3.0",
+    "rimraf": "^6.0.1"
+  }
+}

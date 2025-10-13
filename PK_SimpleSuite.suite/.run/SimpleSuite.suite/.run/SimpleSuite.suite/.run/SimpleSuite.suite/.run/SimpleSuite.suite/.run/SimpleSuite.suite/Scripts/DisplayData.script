@@ -1,3 +1,0 @@
-﻿Set qaSummaryData to CSVValue(file resourcePath("qasummary_record.csv"))
-
-Log the first item of qaSummaryData
